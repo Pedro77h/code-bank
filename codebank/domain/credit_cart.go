@@ -6,22 +6,22 @@ import (
 )
 
 type CreditCard struct {
-	id              string
-	name            string
-	number          string
-	expirationMonth int32
-	expirationYear  int32
-	cvv             int32
-	balance         float64
-	limit           float64
-	createdAt       time.Time
+	ID              string
+	Name            string
+	Number          string
+	ExpirationMonth int32
+	ExpirationYear  int32
+	CVV             int32
+	Balance         float64
+	Limit           float64
+	CreatedAt       time.Time
 }
 
 func NewCreditCard() *CreditCard {
 	c := &CreditCard{}
 
-	c.id = uuid.NewV4().String()
-	c.createdAt = time.Now()
+	c.ID = uuid.NewV4().String()
+	c.CreatedAt = time.Now()
 
 	return c
 }
